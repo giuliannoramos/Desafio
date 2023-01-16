@@ -1,5 +1,6 @@
 ﻿using Desafio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 
 namespace Desafio.Controllers
@@ -20,7 +21,7 @@ namespace Desafio.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BuscarEndereco([FromRoute] string cep)
+        public async Task<IActionResult> BuscarEndereco([FromRoute] [RegularExpression(@"^\d{8}$")] string cep)
         {
             var response = await _enderecoService.BuscarEndereco(cep);
 
