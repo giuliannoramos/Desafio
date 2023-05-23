@@ -37,6 +37,22 @@ Este desafio consiste em uma Web API desenvolvida em C# utilizando o framework .
 - A entrada do CEP é validada para aceitar apenas `8 caracteres numéricos`.
 - Certifique-se de que sua máquina tenha acesso à Internet para que a API possa consumir os dados do ViaCEP.
 
+## Implementação do Cache em Memória
+
+Para realizar essa implementação, foi utilizado o recurso IMemoryCache fornecido pelo framework .NET Core. Esse serviço permite armazenar objetos em memória por um período determinado, facilitando o acesso aos dados sem a necessidade de consultas adicionais à API externa.
+
+Quando a API recebe uma solicitação de busca por um CEP, a lógica de consulta segue os seguintes passos:
+
+1. Primeiro, verifica-se se o endereço correspondente ao CEP está presente no cache em memória.
+2. Se o endereço estiver presente no cache, ele é retornado imediatamente, indicando que foi obtido do cache.
+3. Caso contrário, é feita uma chamada à API do ViaCEP para obter o endereço.
+4. O endereço obtido é armazenado no cache em memória para consultas futuras, com um tempo de expiração determinado.
+5. Por fim, o endereço é retornado como resposta da consulta, indicando que foi obtido diretamente do ViaCEP.
+
+Essa lógica permite que as consultas seguintes para o mesmo CEP sejam atendidas diretamente pelo cache, evitando chamadas adicionais à API externa. Isso resulta em um melhor desempenho da API, reduzindo o tempo de resposta, melhorando a experiência do usuário e diminuindo a carga no sistema.
+
 ## Conclusão
 
-Esta Web API foi desenvolvida como um projeto de estudo pessoal para demonstrar a criação de uma API simples que consome dados de uma API externa. Sinta-se à vontade para explorar o código-fonte fornecido. Caso tenha dúvidas, problemas ou sugestões de melhoria, não hesite em entrar em contato.
+Esta Web API foi desenvolvida como um projeto de estudo pessoal, com o objetivo de demonstrar a criação de uma API simples que consome dados de uma API externa, utilizando um recurso de cache em memória para melhorar o desempenho.
+
+Fique à vontade para explorar o código-fonte fornecido e entender o funcionamento da API. Se surgirem dúvidas, problemas ou se tiver sugestões de melhoria, não hesite em entrar em contato.
