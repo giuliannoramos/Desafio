@@ -25,14 +25,17 @@ namespace Desafio.Services
             var cacheKey = $"endereco_{cep}";
 
             // Verifica se os dados estão em cache
-            if (_cache.TryGetValue(cacheKey, out ResponseGenerico<EnderecoResponse> enderecoCache))
+            if (_cache.TryGetValue(cacheKey, out ResponseGenerico<EnderecoResponse>? enderecoCache))
             {
                 // Os dados estão em cache, define a fonte como "Cache" e retorna os dados
-                enderecoCache.FonteDados = "Cache";
-                return enderecoCache;
+                if (enderecoCache != null)
+                {
+                    enderecoCache.FonteDados = "Cache";
+                    return enderecoCache;
+                }
             }
 
-            // Os dados não estão em cache, faz a busca na API do ViaCEP
+            // Se os dados não estão em cache, faz a busca na API do ViaCEP
             var enderecoViaCep = await _viacepApi.BuscarEnderecoPorCep(cep);
 
             // Mapeia o objeto de retorno para o tipo desejado
@@ -49,7 +52,7 @@ namespace Desafio.Services
 
             // Define a fonte como "ViaCEP" e retorna os dados
             enderecoResponse.FonteDados = "ViaCEP";
-            return enderecoResponse;
+            return enderecoResponse!;
         }
     }
 }
