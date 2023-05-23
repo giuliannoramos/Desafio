@@ -23,13 +23,13 @@ namespace Desafio.Controllers
         {
             var response = await _enderecoService.BuscarEndereco(cep); // Chama o serviço para buscar o endereço com base no CEP
 
-            if (response.CodigoHttp == HttpStatusCode.OK && response.DadosRetorno != null)
+            if (response.DadosRetorno != null)
             {
                 return Ok(response); // Retorna a resposta completa do serviço
             }
             else
             {
-                return StatusCode((int)response.CodigoHttp, response.ErroRetorno); // Retorna o código de status HTTP e a mensagem de erro correspondente
+                return StatusCode((int)HttpStatusCode.NotFound); // Retorna o código de status HTTP 404 Not Found
             }
         }
     }
