@@ -15,6 +15,6 @@ namespace Desafio.Dtos
         public ExpandoObject? ErroRetorno { get; set; }
 
         // Propriedade para indicar a fonte dos dados (ViaCEP ou cache)
-        public string FonteDados { get; set; }
+        public string? FonteDados { get; set; }
     }
 }
