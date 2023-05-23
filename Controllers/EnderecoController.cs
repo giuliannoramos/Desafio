@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
+using Desafio.Dtos;
 using Desafio.Interfaces;
 using System.Threading.Tasks;
 
@@ -18,13 +19,13 @@ namespace Desafio.Controllers
         }
 
         [HttpGet("busca/{cep}")]
-        public async Task<IActionResult> BuscarEndereco([FromRoute] [RegularExpression(@"^\d{8}$")] string cep)
+        public async Task<IActionResult> BuscarEndereco([FromRoute][RegularExpression(@"^\d{8}$")] string cep)
         {
             var response = await _enderecoService.BuscarEndereco(cep); // Chama o serviço para buscar o endereço com base no CEP
 
-            if (response.CodigoHttp == HttpStatusCode.OK)
+            if (response.CodigoHttp == HttpStatusCode.OK && response.DadosRetorno != null)
             {
-                return Ok(response.DadosRetorno); // Retorna os dados do endereço se a resposta for bem-sucedida
+                return Ok(response); // Retorna a resposta completa do serviço
             }
             else
             {

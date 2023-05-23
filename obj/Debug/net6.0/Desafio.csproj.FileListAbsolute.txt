@@ -7,6 +7,12 @@ C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Desafio.dll
 C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Desafio.pdb
 C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -32,9 +38,3 @@ C:\Users\giule\source\repos\Desafio\obj\Debug\net6.0\refint\Desafio.dll
 C:\Users\giule\source\repos\Desafio\obj\Debug\net6.0\Desafio.pdb
 C:\Users\giule\source\repos\Desafio\obj\Debug\net6.0\Desafio.genruntimeconfig.cache
 C:\Users\giule\source\repos\Desafio\obj\Debug\net6.0\ref\Desafio.dll
-C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
-C:\Users\giule\source\repos\Desafio\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
