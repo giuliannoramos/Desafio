@@ -17,19 +17,19 @@ Este desafio consiste em uma Web API desenvolvida em C# utilizando o framework .
 ## Uso
 
 1. Execute a aplicação pressionando `F5` ou através do comando `dotnet run` no diretório raiz do projeto.
-2. A API estará disponível na URL `https://localhost:5001` (ou em outra porta, dependendo da configuração).
+2. A API estará disponível na URL `https://localhost:7033` (ou em outra porta, dependendo da configuração).
 3. Você pode testar a API usando o Swagger ou o Postman.
 
 ### Swagger
 
-- Abra o seguinte URL em seu navegador: `https://localhost:5001/swagger`
-- Use a interface do Swagger para enviar uma solicitação GET para a rota `/api/cep/{cep}`, substituindo `{cep}` pelo CEP que deseja consultar.
+- Abra o seguinte URL em seu navegador: `https://localhost:7033/swagger`
+- Use a interface do Swagger para enviar uma solicitação GET para a rota `/api/Endereco/busca/{cep}`, substituindo `{cep}` pelo CEP que deseja consultar.
 - A resposta será um objeto JSON contendo o endereço completo correspondente ao CEP fornecido.
 
 ### Postman
 
 - Abra o Postman ou qualquer cliente de API que preferir.
-- Crie uma solicitação GET para a URL `https://localhost:5001/api/cep/{cep}`, substituindo `{cep}` pelo CEP desejado.
+- Crie uma solicitação GET para a URL `https://localhost:7033/api/Endereco/busca/{cep}`, substituindo `{cep}` pelo CEP desejado.
 - Envie a solicitação e você receberá uma resposta com o endereço completo correspondente ao CEP fornecido.
 
 ## Observações
